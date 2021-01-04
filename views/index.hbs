@@ -1,0 +1,55 @@
+<header class="head">
+    <nav class="row">
+
+    </nav>
+    {{!-- <div class="banner">
+        <h1>Blog</h1>
+    </div> --}}
+</header>
+<div class="container-fluid about">
+    <div class="container text">
+        <div class="row">
+            <div class="col-12">
+                <div class="articles">
+                    <form action="/photos" method="post">
+                        {{#each commentList}}
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">{{this.title}}</p>
+                            </div>
+                            <img src="http:{{this.file.url}}" class="card-img-top" alt="images" style="">
+                        </div>
+                        <div class="row mb-3">
+                            {{!-- <label for="{{this.title}}" style="display: none;">{{this.title}}</label>
+                            <input type="text" id="fname" name="{{this.title}}" value="{{this.title}}" style="display: none;"> --}}
+                            <label for="size">Choose a size</label>
+                            <select name="{{this.title}}" id="size" class="form-select"
+                                aria-label="Default select example">
+                                <option selected>Size</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large Canvas - £15">Large canvas - £15</option>
+                            </select>
+                            {{!-- <input type="text" name="meat"> --}}
+                        </div>
+                        {{/each}}
+                        <input type="text" name="meat">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <hr>
+            </div>
+            <!-- Dummy article structure END -->
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+{{!-- <div class="card" style="width: 18rem;">
+    <img src="/images/jesslogo.png" class="card-img-top" alt="...">
+</div>
+
+{{#each commentList}}
+<li>{{this.title}}</li><span>{{this.blogDescription}}</span>
+{{/each}} --}}
